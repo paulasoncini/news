@@ -1,7 +1,6 @@
 body {
     font-family: 'Raleway', sans-serif;
     margin-left: 25px;
-    font-weight: bold;
 }
 
 h1, h2, h3 {
@@ -15,14 +14,6 @@ h4 {
     font-size: 25px;
 }
 
-  .article-title {
-    font-weight: bold;
-  }
-
-    .article-author {
-    font-weight: bold;
-  }
-  
   .navbar {
     background-color: white;
   }
@@ -62,5 +53,5 @@ h4 {
   }
 
   .btn:hover {
-    background-color: rgb(245, 192, 219);
+    background-color: rgb(243, 113, 124);
   }

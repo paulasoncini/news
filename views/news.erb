@@ -45,8 +45,8 @@
     <% article_number = 1 %>
     <% for article in @news["articles"] %>
     <p> <h4> <%= "##{article_number}:" %> </h4> </p>
-    <p> <a class="article-title"><%= "Title and source: #{article["title"]}" %> </a> </p>
-    <p> <a class="article-author"><%= "Author: #{article["author"]}" %> </a> </p>
+    <p> <%= "Title and source: #{article["title"]}" %> </p>
+    <p> <%= "Author: #{article["author"]}" %> </p>
     <p> <%= "Brief description: #{article["description"]}." %> </p>
     <p> Link to full article:
     <a href= <%="#{article["url"]}" %> target="_blank"> <%="#{article["url"]}" %> </a> </p>
