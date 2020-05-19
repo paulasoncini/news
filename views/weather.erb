@@ -32,26 +32,36 @@
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav mr-auto">
             <a class="button1 nav-item nav-link" href="/">Home<span class="sr-only">(current)</span></a>
-            <a class="button1 nav-item nav-link" href="/weather">Weather</a>
-            <a class="button1 nav-item nav-link active" href="/news">News</a>
+            <a class="button1 nav-item nav-link active" href="/weather">Weather</a>
+            <a class="button1 nav-item nav-link" href="/news">News</a>
           </div>
         </div>
     </nav>
 
-        <p> </p>
 
-    <h4> Important news of the day: </h4>
+    <p> </p>
 
-    <% article_number = 1 %>
-    <% for article in @news["articles"] %>
-    <p> <h4> <%= "##{article_number}:" %> </h4> </p>
-    <p> <a class="article-title"><%= "Title and source: #{article["title"]}" %> </a> </p>
-    <p> <a class="article-author"><%= "Author: #{article["author"]}" %> </a> </p>
-    <p> <%= "Brief description: #{article["description"]}." %> </p>
-    <p> Link to full article:
-    <a href= <%="#{article["url"]}" %> target="_blank"> <%="#{article["url"]}" %> </a> </p>
-    <% article_number = article_number + 1 %>
+    <h4> Weather forecast for <%= @location %>:</h4>
+
+    <!-- <h3>In <% @forecast["timezone"] %>, it is currently <% @forecast["current"]["temp"] %> degrees and <% @forecast["current"]["weather"][0]["description"] %>. </h3> -->
+
+    <!-- It is currently <%= @current_weather_degrees %> -->
+
+    <p> <h5> Right now, <%= @text_current_weather %> </h5> </p>
+
+    <p> <h5> Extended forecast: </h5> </p>
+
+    <% day_number = 1 %>
+    <% for day in @forecast["daily"] %>
+    <% if day_number == 1 %>
+    <p> <h6> <%= "Tomorrow, we'll have a high of #{day["temp"]["max"]} and #{day["weather"][0]["description"]}." %> </h6> </p>
+    <% elsif day_number >= 2 %>
+    <p> <h6> <%= "On day #{day_number}, we'll have a high of #{day["temp"]["max"]} and #{day["weather"][0]["description"]}." %> </h6> </p>
     <% end %>
+    <% day_number = day_number + 1 %>
+    <% end %>
+
+
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

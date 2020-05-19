@@ -1,0 +1,66 @@
+body {
+    font-family: 'Raleway', sans-serif;
+    margin-left: 25px;
+    font-weight: bold;
+}
+
+h1, h2, h3 {
+    font-family: 'PT Sans Caption', sans-serif;
+    font-size: 20px;
+    margin-left: 15px;
+}
+
+h4 {
+    font-family: 'PT Sans Caption', sans-serif;
+    font-size: 25px;
+}
+
+  .article-title {
+    font-weight: bold;
+  }
+
+    .article-author {
+    font-weight: bold;
+  }
+  
+  .navbar {
+    background-color: white;
+  }
+
+  .navbar-brand {
+    font-size: 40px;
+  }
+  
+  .navbar-nav {
+    font-size: 40px;
+    white-space: nowrap;
+  }
+  
+  .button1 {
+    background-color: white;
+    border: none;
+    text-decoration: none;
+    font-size: 30px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+  }
+
+  .button1:hover {
+    background-color: rgb(245, 192, 219);
+    color: white;
+    border: none;
+  }
+
+  .btn {
+    font-family: 'PT Sans Caption', sans-serif;
+    background-color:  rgb(212, 34, 49);
+    border: none;
+    text-decoration: none;
+    display: inline-block;
+    transition-duration: 0.4s;
+    cursor: pointer;
+  }
+
+  .btn:hover {
+    background-color: rgb(245, 192, 219);
+  }

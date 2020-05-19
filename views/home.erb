@@ -31,27 +31,19 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav mr-auto">
-            <a class="button1 nav-item nav-link" href="/">Home<span class="sr-only">(current)</span></a>
+            <a class="button1 nav-item nav-link active" href="/">Home<span class="sr-only">(current)</span></a>
             <a class="button1 nav-item nav-link" href="/weather">Weather</a>
-            <a class="button1 nav-item nav-link active" href="/news">News</a>
+            <a class="button1 nav-item nav-link" href="/news">News</a>
           </div>
         </div>
     </nav>
 
-        <p> </p>
-
-    <h4> Important news of the day: </h4>
-
-    <% article_number = 1 %>
-    <% for article in @news["articles"] %>
-    <p> <h4> <%= "##{article_number}:" %> </h4> </p>
-    <p> <a class="article-title"><%= "Title and source: #{article["title"]}" %> </a> </p>
-    <p> <a class="article-author"><%= "Author: #{article["author"]}" %> </a> </p>
-    <p> <%= "Brief description: #{article["description"]}." %> </p>
-    <p> Link to full article:
-    <a href= <%="#{article["url"]}" %> target="_blank"> <%="#{article["url"]}" %> </a> </p>
-    <% article_number = article_number + 1 %>
-    <% end %>
+    <p> </p>
+    <h4> Here you'll find information on the weather and brief description of some important news of the day.
+    </h4>
+    <p> </p>
+    <a class="btn btn-info btn-lg" href="/weather" role="button">Go to Weather page</a>
+    <a class="btn btn-info btn-lg" href="/news" role="button">Go to News page</a>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
