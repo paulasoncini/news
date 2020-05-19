@@ -54,9 +54,9 @@
     <% day_number = 1 %>
     <% for day in @forecast["daily"] %>
     <% if day_number == 1 %>
-    <p> <h6> <%= "Tomorrow, we'll have a high of #{day["temp"]["max"]} and #{day["weather"][0]["description"]}." %> </h6> </p>
+    <p> <h6> <%= "Tomorrow, we'll have a high of #{day["temp"]["max"]}, a low of #{day["temp"]["min"]}, and #{day["weather"][0]["description"]}." %> </h6> </p>
     <% elsif day_number >= 2 %>
-    <p> <h6> <%= "On day #{day_number}, we'll have a high of #{day["temp"]["max"]} and #{day["weather"][0]["description"]}." %> </h6> </p>
+    <p> <h6> <%= "On day #{day_number}, we'll have a high of #{day["temp"]["max"]}, a low of #{day["temp"]["min"]}, and #{day["weather"][0]["description"]}." %> </h6> </p>
     <% end %>
     <% day_number = day_number + 1 %>
     <% end %>
